@@ -1,0 +1,60 @@
+#:kivy 2.1.0
+
+
+<Player1>:
+    size: 10, 10
+    canvas:
+        Color: 
+            rgb: (0,1,0)
+        Rectangle:
+            pos: self.pos
+            size: self.size 
+
+<Player2>:
+    size: 10, 10
+    canvas:
+        Color:
+            rgb: (1, 0, 0)
+        Rectangle:
+            pos: self.pos
+            size: self.size 
+
+
+<SnakeGame>:
+    player1: P1Snake
+    player2: P2Snake # created p2 snake in py code - look for id P1Snake
+
+    # canvas:
+    #     Rectangle:
+    #         pos: root.width/2 - 250, root.height/2 - 250
+    #         size: 500, 500
+            
+    # Label:
+    #     font_size: 35  
+    #     center_x: root.width / 4
+    #     top: root.top - 25
+    #     text: "Player 1"
+        
+    # Label:
+    #     font_size: 35  
+    #     center_x: root.width * 3 / 4
+    #     top: root.top - 25
+    #     text: "Player 2"
+
+    Player1:
+        id: P1Snake
+        center: self.parent.center
+        # canvas:
+        #     Color: 
+        #         rgb: (0,1,0)
+
+    Player2: 
+        id: P2Snake
+        center: self.parent.center
+        # canvas:
+        #     Color: 
+        #         rgb: (1,0,0)
+# <Snake1>:
+#     size: 50,50
+#     Rectangle:
+#         pos: self.size
